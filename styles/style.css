@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 15px;
+}
+
+.main-container {
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+
+.content-wrapper {
+    width: 100%;
+}
+
+label {
+    font-size: 22px;
+}
+
+input[type=text],
+input[type=date] {
+    padding: 10px 15px;
+    width: 100%;
+    min-height: 55px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    outline: none;
+}
+
+#submitBtn {
+    padding: 15px 15px;
+    border: rgb(190, 227, 250);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#submit-btn:hover {
+    background: #ff3c66;
+}
+
+.todo-container-heading {
+    margin: 20px 0;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card:nth-child(odd) {
+    background-color: #433c3c1a;
+}
+
+.card:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    height: 72px;
+}
+
+.card-subtitle {
+    text-align: left;
+    height: 100%;
+}
+
+.actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+i {
+    cursor: pointer;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+.hide-element {
+    visibility: hidden;
+}
+
+@media (min-width:760px) and (max-width:990px) {
+    #todo-container {
+        grid-template-columns: repeat(3, 32%);
+    }
+}
+
+@media (min-width:889px) {
+    form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+    }
+
+    .input-wrapper {
+        width: 49%;
+    }
+
+    .card {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:991px) {
+    .main-container {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
+    #todo-container {
+        grid-template-columns: repeat(4, 24%);
+    }
+
+}
