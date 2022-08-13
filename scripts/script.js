@@ -56,7 +56,9 @@ class ToDoList {
 
     tasksArr.forEach((task, taskIndex) => {
       const removeItemFromArr = () => {
-        this.tasksArr = this.tasksArr.slice(0, taskIndex);
+        if (taskIndex > -1) {
+          this.tasksArr.splice(taskIndex, 1);
+        }
       };
 
       // create elements needed for todo item
