@@ -108,11 +108,12 @@ class ToDoList {
         this.updateDom(this.tasksArr);
       });
 
-      // adding strikethrough if an item is completed
+      // adding styling if an item is completed
       if (task.isCompleted) {
         li.style.textDecoration = 'line-through';
         completeIcon.classList.add('hide-element');
         editIcon.classList.add('hide-element');
+        li.style.opacity = 0.5;
       }
 
       // appending all the elements
